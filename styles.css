@@ -31,7 +31,7 @@ form{
  */
 .blink {
   animation: blink 1s steps(5, start) infinite;
-  -webkit-animation: blink 1s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) 1; /*Only flash once, I get it already*/
 }
 @keyframes blink {
   to { visibility: hidden; }

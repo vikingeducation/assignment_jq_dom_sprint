@@ -1,0 +1,11 @@
+$(document).ready(function() {
+  $("h1").text("Something cheeky");
+  var h4 = $('h4:contains("Upcoming")');
+  h4.append('<ol><li>Change the <code class=" language-bash"><span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span></code> to something cheeky</li><li>Inside the container for "Upcoming Traversals", create and insert an ordered list which corresponds to this one.</li><li>Make all <code class=" language-bash">sad</code> classes into <code class=" language-bash">happy</code> ones.</li><li>Make the annoying popup link point instead to <code class=" language-bash">http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>cashcats<span class="token punctuation">.</span>biz</code>.</li><li>Change the positioning of the annoying popup so it is on the right side of the screen (it\'s okay to use direct CSS here).  Make it 30 pixels lower than its current position by utilizing its current <code class=" language-bash">top</code> value.</li><li>Replace the ellipsis <code class=" language-bash"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code> in one of the suggested topics with content of your choice -- but do so by traversing from a different element.</li><li>Replace the form input with a <code class=" language-bash"><span class="token operator">&lt;</span>textarea<span class="token operator">&gt;</span></code> instead of a <code class=" language-bash"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span><span class="token operator">&gt;</span></code>.</li></ol>')
+  $(".sad").removeClass("sad").addClass("happy");
+  $("#annoying-popup a").attr("href", "http://www.cashcats.biz");
+  $("#annoying-popup").css("right", "5px").css("top", "40px");
+  // $('li:contains("...")').text("content of your choice");
+  $($($('#annoying-popup').parent().children()[2]).children()[2]).children().find("li")[6].innerText = "content of your choice";
+  $("input").first().replaceWith("<textarea placeholder = 'Tell me a story!'></textarea>");
+  });

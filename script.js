@@ -20,3 +20,8 @@ $('#annoying-popup').css('top', 30).css('right', '0px')
 //$('li:contains("Killer klicks")').first().prev().text("Got you!")
 
 $('li:contains("Admirable alterations")').next().text("Got you!")
+
+$parent = $('input[type=text').parent();
+$('input[type=text').remove();
+
+$parent.prepend("<textarea placeholder='Tell me a story!' />");

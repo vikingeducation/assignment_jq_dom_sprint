@@ -1,8 +1,9 @@
-$("h1").text("This is not a drill: CLG 3-0 TSM");
+$("h1").val("This is not a drill: CLG 3-0 TSM");
+$("h1").addClass("blink");
 
-$($("ul").children()[6]).text("My new text.");
+$($("ul").children().elements[6]).val("My new text.");
 
-$($("h4")[0]).html("<h4>Upcoming Traversals:</h4><ol><li>Change the h1 to something cheeky</li>\
+$($("h4").elements[0]).html("<h4>Upcoming Traversals:</h4><ol><li>Change the h1 to something cheeky</li>\
   <li>Inside the container for \"Upcoming Traversals\", create and insert an ordered list which corresponds to this one.</li>\
   <li>Make all sad classes into happy ones.</li>\
   <li>Make the annoying popup link point instead to http://www.cashcats.biz.</li>\
@@ -11,12 +12,25 @@ $($("h4")[0]).html("<h4>Upcoming Traversals:</h4><ol><li>Change the h1 to someth
   <li>Replace the form input with a textarea instead of a input type=\"text\".</li>\
   <ol>")
 
-$(".sad").removeClass("sad").addClass("happy");
-$("#annoying-popup a").attr("href", "http://www.cashcats.biz");
+$(".sad").addClass("happy")
+$(".sad").removeClass("sad");
+$("a").attr("href", "http://www.cashcats.biz");
 $("#annoying-popup").css("left", "90%");
 var top_val = parseInt($("#annoying-popup").css("top").replace(/\D+/,""));
 $("#annoying-popup").css("top", top_val + 30);
+$("#annoying-popup").on("mouseenter", function(e){
+	alert("HI!");
+})
+
+$("#annoying-popup").on("mouseleave", function(e){
+	alert("BYE!");
+})
 
 
-$($("form").children()[0]).remove();
-$($("form").children()[0]).before(document.createElement("textarea"));
+$($("form").children().elements[0]).remove();
+$("form").before(document.createElement("textarea"));
+$("#submit-btn").on("click", function(e){
+	alert("Removing annoying alerts.");
+	$("#annoying-popup").removeEvents();
+	e.preventDefault();
+})

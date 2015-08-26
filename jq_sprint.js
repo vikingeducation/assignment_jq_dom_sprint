@@ -20,4 +20,19 @@ $(document).ready(function(){
   $('#annoying-popup').css('top', function(index, value){
     return parseInt(value) + 30 + "px";
   });
+
+  // Replace the ellipsis ...
+  $('ul').children().filter(':contains("...")').html("something other than ellipsis");
+
+  // Replace the form input with a textarea
+  var textInput = $('input').first();
+  var placeholder = textInput.attr('placeholder');
+  textInput.replaceWith('<textarea placeholder="' + placeholder + '">');
 })
+
+
+
+
+
+
+

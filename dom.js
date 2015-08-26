@@ -21,3 +21,19 @@ $sadItems.addClass('happy');
 // Change link of flash msg
 var $link = $('#annoying-popup a');
 $link.attr('href', 'http://www.cashcats.biz');
+
+var $popUp = $('#annoying-popup');
+
+$popUp.css({'left': '80%', "top": "30px" });
+
+$div = $(".suggested-topics");
+//I dont get chainging!
+$children = $div.children();
+$targetList = $children.first().next();
+$target = $targetList.children().eq(6);
+$target.html("CHANGED");
+
+$form = $('form');
+$targetTextArea = $form.children().eq(0);
+$targetTextArea.replaceWith('<textarea>');
+

@@ -25,6 +25,12 @@ form{
   top: 10px;
   height: 100px;
 }
+/* Trevor added this just for styling purposes */
+.info-box{
+	width: 150px;
+	display: block;
+	margin: 0px auto;
+}
 /* What, you like awful '90's blink tags?
  * here's where this came from:
  * http://stackoverflow.com/questions/13955163/imitating-a-blink-tag-with-css3-animations

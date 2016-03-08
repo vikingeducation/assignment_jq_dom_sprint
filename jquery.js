@@ -82,7 +82,7 @@ function jQuery(selector, attributes) {
 
   this.replaceWith = function(object) {
     this.each(function(index, element) {
-      element.outerHTML = object.elements[0].outerHTML
+      element.outerHTML = object.elements[0].outerHTML;
     });
   };
 
@@ -103,7 +103,7 @@ function jQuery(selector, attributes) {
   };
 
   this.each = function(callback) {
-    for (var i = 0; i < this.length(); ++i) {
+    for (var i = 0; i < this.length(); i++) {
       callback(i, this.elements[i]);
     }
   };

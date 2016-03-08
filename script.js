@@ -19,4 +19,17 @@ $(document).ready(function() {
     orderedList.append("<li>" + topics[i].replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + "</li>");
   }
   $('.info-box').append(orderedList);
+
+  $(".sad").addClass("happy").removeClass("sad");
+
+  $("#annoying-popup a").attr( 'href', "http://www.cashcats.biz");
+
+  $("#annoying-popup").css(
+    {
+      right: "30px",
+      top: "+=10px"
+    }
+  );
+
+  $(".super-duper.happy").html = "THIS IS SUPER DUPER HAPPY";
 });

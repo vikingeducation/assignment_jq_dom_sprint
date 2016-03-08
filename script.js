@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $("#annoying-popup a").attr( 'href', "http://www.cashcats.biz");
 
   $("#annoying-popup").css('right', "30px")
-  // $("#annoying-popup").css('top', "+=10px")
+  $("#annoying-popup").css('top', "20px")
 
   $('.super-duper').next().next().next().html("THIS IS SUPER DUPER HAPPY");
     var attrs = { };

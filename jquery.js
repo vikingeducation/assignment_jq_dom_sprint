@@ -65,7 +65,7 @@ function jQuery(selector, attributes) {
       case ".":
         console.log(selector + " is a class");
         selector = selector.slice(1);
-        results = Array.prototype.slice.call(document.getElementsByClassName(selector));
+        results = [].slice.call(document.getElementsByClassName(selector));
         break;
       case "#":
         console.log(selector + " is an id");

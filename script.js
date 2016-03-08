@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
   // $('h1').animate({
   //   fontSize: '100px',
   // }, 500, 'swing', function() {
@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   );
 
-  $('.super-duper').next().next().next().html("THIS IS SUPER DUPER HAPPY")
+  $('.super-duper').next().next().next().html("THIS IS SUPER DUPER HAPPY");
     var attrs = { };
 
   var inputAttributes = $("input[type=text]")[0].attributes;
-  for (var i = 0; i < inputAttributes.length; ++i) {
+  for (i = 0; i < inputAttributes.length; ++i) {
     attrs[inputAttributes[i].nodeName] = inputAttributes[i].nodeValue;
   }
 
-  $("input[type=text]").replaceWith(function() { return $('<textarea>', attrs) })
+  $("input[type=text]").replaceWith(function() { return $('<textarea>', attrs); });
 });

@@ -41,6 +41,13 @@ function jQuery(selector) {
       return this;
     }
 
+    if (selector.match(/^<(\w+)>/)) {
+      var tagName = selector.match(/^<(\w+)>/)[1];
+      console.log(tagName);
+      this.elements = [document.createElement(tagName)];
+      return this;
+    }
+
     if (selector.split(/ |\.|#/).length > 1) {
       console.log(selector + "is a complicated query, using querySelector");
       this.elements = document.querySelector(selector);
@@ -168,7 +175,11 @@ function jQuery(selector) {
     } else {
       return this.elements[0].innerHTML;
     }
-  }
+  };
+
+  this.append = function(newElement) {
+    this.html(this.html() + newElement);
+  };
 }
 
 var $ = jQuery;

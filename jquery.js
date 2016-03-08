@@ -25,16 +25,16 @@ function SimpleObject() {
   };
 }
 
-function jQuery(selector) {
+function jQuery(selector, attributes) {
   if (!(this instanceof jQuery)){
     var object =  new jQuery();
-    object.setElements(selector);
+    object.setElements(selector, attributes);
     return object;
   }
 
   this.elements = [];
 
-  this.setElements = function(selector) {
+  this.setElements = function(selector, attributes) {
     if (selector instanceof Element) {
       console.log(selector + "is a node, adding directly to collection");
       this.elements = [selector];
@@ -45,12 +45,17 @@ function jQuery(selector) {
       var tagName = selector.match(/^<(\w+)>/)[1];
       console.log(tagName);
       this.elements = [document.createElement(tagName)];
+      if (attributes) {
+        for ( var key in attributes ) {
+          this.elements[0].setAttribute(key, attributes[key]);
+        }
+      }
       return this;
     }
 
-    if (selector.split(/ |\.|#/).length > 1) {
+    if (selector.split(/ |\.|#|\[|=|\]/).length > 2) {
       console.log(selector + "is a complicated query, using querySelector");
-      this.elements = document.querySelector(selector);
+      this.elements = [].slice.call(document.querySelectorAll(selector));
       return this;
     }
 
@@ -65,7 +70,7 @@ function jQuery(selector) {
       case "#":
         console.log(selector + " is an id");
         selector = selector.slice(1);
-        results = document.getElementById(selector);
+        results = [document.getElementById(selector)];
         break;
       default:
         console.log(selector + " is a tag");
@@ -73,6 +78,16 @@ function jQuery(selector) {
         break;
     }
     this.elements = results;
+  };
+
+  this.replaceWith = function(object) {
+    this.each(function(index, element) {
+      element.outerHTML = object.elements[0].outerHTML
+    });
+  };
+
+  this.next = function() {
+    return $(this.elements[0].nextElementSibling);
   };
 
   this.length = function() {
@@ -178,7 +193,11 @@ function jQuery(selector) {
   };
 
   this.append = function(newElement) {
-    this.html(this.html() + newElement);
+    if (newElement instanceof jQuery) {
+      this.html(this.html() + newElement.html());
+    } else {
+      this.html(this.html() + newElement);
+    }
   };
 }
 

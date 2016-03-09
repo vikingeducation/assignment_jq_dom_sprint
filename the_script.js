@@ -31,5 +31,6 @@ $( document ).ready( function() {
 
   $('.suggested-topics > ul').children()[6].innerHTML = "blah blah"
 
+  $(".input-form input").first().replaceWith('<textarea placeholder="Tell me a story!"></textarea>');
 
 });

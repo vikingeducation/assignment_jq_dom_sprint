@@ -24,6 +24,9 @@ $(document).ready(function() {
   $('ul').children()[6].innerHTML = "BYE BYE ELLIPSIS";
 
   // replace form input with <textarea>
+  $('input[type="text"]').remove();
+  $textArea = $('<textarea name="comment" form="usrform">Enter text here...</textarea>').insertBefore($('input[type="submit"]'))
+  $
 
 })
 

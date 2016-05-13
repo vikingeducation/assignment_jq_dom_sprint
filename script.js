@@ -34,21 +34,45 @@
     });
 
     // 6
-    $.each($('.suggested-topics ul li'), function(index, element) {
-      var $element = $(element);
-      if ($element.text() === '...') {
-        $element.text('Content of my choice!!! Bam!');
-        $element.css('text-decoration', 'underline');
-      }
-    });
+    $('.suggested-topics ul li:contains("...")')
+      .text('Content of my choice!!! Bam!')
+      .css('text-decoration', 'underline');
 
     // 7
     var $input = $('.input-form input[type=text]');
     var placeholder = $input.attr('placeholder');
     $('.input-form input[type=text]').remove();
-    var $textarea = $('<textarea></textarea>');
-    $textarea.attr('placeholder', placeholder);
+    var $textarea = $('<textarea></textarea>')
+      .attr('placeholder', placeholder);
     $('.input-form form').prepend($textarea);
+
+    // 8 Just for fun...
+    var colors = [
+      'red',
+      'orange',
+      'yellow',
+      'green',
+      'blue',
+      'purple',
+      'violet'
+    ];
+    var $rainbow = $('<div class="rainbow"></div>');
+
+    setInterval(function() {
+      $rainbow.html('');
+      var last = colors.pop();
+      colors.unshift(last);
+      $.each(colors, function(index, color) {
+        var $div = $('<div>')
+          .css({
+            height: '10px',
+            background: color
+          });
+        $rainbow.append($div);
+      });
+    }, 250);
+    $('#rainbow').html($rainbow);
+
 
   });
 })($);

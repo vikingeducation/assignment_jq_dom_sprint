@@ -39,4 +39,17 @@ $(document).ready(function(){
   // Running the function in sadToHappyChanger
   sadToHappyClassChanger.changeFromSadToHappy(sadToHappyClassChanger.elements);
 
+  // 4. Make the annoying popup link point instead to http://www.cashcats.biz
+  // Gonna find that link by searching for tags with "a"
+  // change the attribute ["href"]
+  var linkChanger = {
+  	element: document.getElementsByTagName("a")[0],
+  	changeLink: function(element){
+  	  element.setAttribute("href", "http://www.cashcats.biz");
+  	}
+  };
+
+  // Run the function in linkChanger
+  linkChanger.changeLink(linkChanger.element);
+
 });

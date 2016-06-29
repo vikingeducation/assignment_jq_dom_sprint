@@ -68,4 +68,24 @@ $(document).ready(function(){
   // Running that function
   annoyingPopPositionChanger.changePosition(annoyingPopPositionChanger.element);
 
+  // 6. Replace the ellipsis ... in one of the suggested topics with content of your choice -- but do so by traversing from a different element.
+  // I guess I'll find the unordered list right "ul"
+  // go through all it's children until I can find the one with the text that says '...'
+  // and then change it...
+  // piss
+  var ellipsisReplacer = {
+  	parent: document.getElementsByTagName("ul")[0],
+  	replaceEllipsis: function(parent){
+  	  var children = parent.children;
+  	  for (var i = 0; i < children.length; i++) {
+  	    if (children[i].textContent === "...") {
+  	      children[i].textContent = "Would it ever be enough";
+  	    };
+  	  };
+  	}
+  };
+
+  // Running the function inside ellipsisReplacer
+  ellipsisReplacer(ellipsisReplacer.replaceEllipsis(ellipsisReplacer.parent));
+
 });

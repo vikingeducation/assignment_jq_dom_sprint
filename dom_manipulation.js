@@ -52,4 +52,20 @@ $(document).ready(function(){
   // Run the function in linkChanger
   linkChanger.changeLink(linkChanger.element);
 
+  // 5. Change the positioning of the annoying popup so it is on the right side of the screen (it's okay to use direct CSS here). Make it 30 pixels lower than its current position by utilizing its current top value.
+  // Gonna find the element via its id via 'annoying-popup'
+  // then gonna access it's css details and change it to the right hand side.
+  // it's got absolute positioning so just gotta add attribute right: 10px
+  // also gotta add 30px to it's top, I first gotta get the number out of there, add 30, add px and then slot it back in as it's value.
+  var annoyingPopPositionChanger = {
+  	element: document.getElementById("annoying-popup"),
+  	 changePosition: function(element){
+  	 	element.style.top = "40px";
+  	 	element.style.right = "10px";
+  	 }
+  };
+
+  // Running that function
+  annoyingPopPositionChanger.changePosition(annoyingPopPositionChanger.element);
+
 });

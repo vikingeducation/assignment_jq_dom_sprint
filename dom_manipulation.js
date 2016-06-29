@@ -89,9 +89,16 @@ $(document).ready(function(){
   ellipsisReplacer.replaceEllipsis(ellipsisReplacer.parent);
 
   // 7. Replace the form input with a <textarea> instead of a <input type="text">.
-  // find form
+  // Not too sure why we're replacing childNode[1] instead of 0, but it works...
   var inputReplacer = {
-
+  	textArea: document.createElement("textarea"),
+  	form: document.getElementsByTagName("form")[0],
+  	replaceInput: function(form, textArea){
+  		form.replaceChild(textArea, form.childNodes[1]);
+  	}
   };
+
+  // Running the function inside inputReplacer
+  inputReplacer.replaceInput( inputReplacer.form, inputReplacer.textArea );
 
 });

@@ -86,6 +86,12 @@ $(document).ready(function(){
   };
 
   // Running the function inside ellipsisReplacer
-  ellipsisReplacer(ellipsisReplacer.replaceEllipsis(ellipsisReplacer.parent));
+  ellipsisReplacer.replaceEllipsis(ellipsisReplacer.parent);
+
+  // 7. Replace the form input with a <textarea> instead of a <input type="text">.
+  // find form
+  var inputReplacer = {
+
+  };
 
 });

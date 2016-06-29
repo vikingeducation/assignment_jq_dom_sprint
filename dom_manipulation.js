@@ -23,4 +23,20 @@ $(document).ready(function(){
   // Running the function in addListToInfoBox
   addListToInfoBox.addList(addListToInfoBox.element, addListToInfoBox.listToAdd);
 
+  // 3. Make all sad classes into happy ones.
+  // Find all elements that have sad in their classes.
+  // for each one of those elements, remove 'sad' from the classList and then *I wonder if it's possible just to push on 'happy' on to the same classList. If you can't we can just add it to the listName.
+  var sadToHappyClassChanger = {
+  	elements: document.getElementsByClassName("sad"),
+  	changeFromSadToHappy: function(elements){
+  		for (i = (elements.length - 1); i >= 0; i--) {
+  			elements[i].className = elements[i].className + " happy";
+  			elements[i].classList.remove("sad");
+  		};
+  	}
+  };
+
+  // Running the function in sadToHappyChanger
+  sadToHappyClassChanger.changeFromSadToHappy(sadToHappyClassChanger.elements);
+
 });

@@ -10,7 +10,7 @@ $(document).ready(
   // append it to upcoming traversal
     var $list = $('.suggested-topics ul li');
 
-  };
+  }
 );
 
 

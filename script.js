@@ -20,4 +20,32 @@ sadDivs.toggleClass("sad").toggleClass("happy");
 var popupLink = $("#annoying-popup a");
 popupLink.attr("href", "http://www.cashcats.biz");
 
-popupLink.parent.css("height", "400px");
+popupLink.parent().css("right", "10px");
+var topHeight = popupLink.parent().css("top")
+var topHeight = parseInt(topHeight) + 30;
+popupLink.parent().css("top", String(topHeight) + "px");
+
+// add suggest topics content
+var $suggestedTopics = $('.suggested-topics');
+
+var $topicsList = $suggestedTopics.children().last();
+var $openLi = $topicsList.children().last().prev();
+
+$openLi.text("Eat more sausage links");
+
+//change text input to textarea 
+var $input = $('.input-form form input');
+var placeholder = $input.attr("placeholder");
+var $textarea = $('<textarea placeholder=' + placeholder + '></textarea>');
+$input.first().replaceWith($textarea);
+
+
+
+
+
+
+
+
+
+
+

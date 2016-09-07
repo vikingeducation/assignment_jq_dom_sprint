@@ -40,11 +40,16 @@ function jQuery(input) {
     var inputArray = input.split(" ");
     var counter = 0;
     while (counter < inputArray.length) {
-      item = jquery_object.pop();
+      var item = jquery_object.pop();
       //console.log(item);
-      children = getChildren(item, inputArray[counter]);
-      for(var i = 0; i < children.length; i++) {
-        jquery_object.push(children[i]);
+      var children = getChildren(item, inputArray[counter]);
+
+      if (inputArray[counter][0] === '#') {
+        jquery_object.push(children);
+      } else {
+        for(var i = 0; i < children.length; i++) {
+          jquery_object.push(children[i]);
+        }
       }
       counter++;
     }
@@ -106,13 +111,13 @@ function jQuery(input) {
       return this.collection[0].attributes.value;
     }
   }
-  
+
   this.css = function(style, value) {
     if (value) {
       for(var i = 0; i < this.collection.length; i++) {
         this.collection[i].style[style] = value;
       }
-      return this.collection;
+      return this;
     } else {
       return this.collection[0].style[style];
     }
@@ -140,7 +145,7 @@ function jQuery(input) {
   this.attr = function(attrName, setValue) {
     if (setValue) {
       for(var i = 0; i < this.collection.length; i++) {
-        this.collection[i].attributes[attrName] = setValue;
+        this.collection[i].setAttribute(attrName, setValue);
       }
     } else
       return this.collection[0].attributes[attrName];
@@ -157,7 +162,7 @@ function jQuery(input) {
   this.append = function(htmlString) {
     for(var i = 0; i < this.collection.length; i++) {
       var html = this.collection[i].innerHTML;
-      html += " " + htmlstring;
+      html += " " + htmlString;
       this.collection[i].innerHTML = html;
     }
   }
@@ -174,7 +179,11 @@ function jQuery(input) {
     var final = [];
     for (var i = 0; i < children.length; i++) {
       var childObject = $(children[i]);
-      final.push(childObject[0]);
+      if (childObject.collection[0].nodeName === "#text") {
+        continue;
+      } else {
+        final.push(childObject.collection[0]);
+      }
     }
     return final;
   }

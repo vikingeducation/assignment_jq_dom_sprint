@@ -12,6 +12,7 @@ currentTop = currentTop.slice(0,-2)
 
 $('#annoying-popup').css('top', String(Number(currentTop) + 30) + 'px').css('right', '0px');
 
+
 var list = $('ul').children()[6];
 
 $(list).text("GREAT FUN!");

@@ -142,4 +142,4 @@ var jQuery = function(ele) {
   }
 }
 
-var $ = jQuery;
+var $$ = jQuery;

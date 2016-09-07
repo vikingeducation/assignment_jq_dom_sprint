@@ -86,7 +86,7 @@ function jQuery(input) {
     };
   }
 
-  this.toggleclass = function(input) {
+  this.toggleClass = function(input) {
     input = input.split(" ");
     for(var i = 0; i < this.collection.length; i++) {
       for(var j = 0; j < input.length; j++) {
@@ -150,6 +150,31 @@ function jQuery(input) {
       return this.collection[0].innerHTML = htmlString;
     } else {
       return this.collection[0].innerHTML;
+    }
+  }
+
+  this.append = function(htmlString) {
+    for(var i = 0; i < this.collection.length; i++) {    
+      var html = this.collection[i].innerHTML;
+      html += " " + htmlstring;
+      this.collection[i].innerHTML = html;
+    }
+  }
+
+  this.text = function(text) {
+    for(var i = 0; i < this.collection.length; i++) {
+      this.collection[i].innerText = text;
+    }
+
+  }
+
+  this.children = function (){
+    return this.collection[0].childNodes;
+  }
+
+  this.replaceWith = function(newHtml) {
+     for(var i = 0; i < this.collection.length; i++) {
+      this.collection[i].outerHTML = newHtml;
     }
   }
 

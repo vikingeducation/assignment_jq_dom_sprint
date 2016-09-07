@@ -112,6 +112,7 @@ function jQuery(input) {
       for(var i = 0; i < this.collection.length; i++) {
         this.collection[i].style[style] = value;
       }
+      return this.collection;
     } else {
       return this.collection[0].style[style];
     }
@@ -154,7 +155,7 @@ function jQuery(input) {
   }
 
   this.append = function(htmlString) {
-    for(var i = 0; i < this.collection.length; i++) {    
+    for(var i = 0; i < this.collection.length; i++) {
       var html = this.collection[i].innerHTML;
       html += " " + htmlstring;
       this.collection[i].innerHTML = html;
@@ -169,11 +170,17 @@ function jQuery(input) {
   }
 
   this.children = function (){
-    return this.collection[0].childNodes;
+    var children = this.collection[0].childNodes;
+    var final = [];
+    for (var i = 0; i < children.length; i++) {
+      var childObject = $(children[i]);
+      final.push(childObject[0]);
+    }
+    return final;
   }
 
   this.replaceWith = function(newHtml) {
-     for(var i = 0; i < this.collection.length; i++) {
+    for(var i = 0; i < this.collection.length; i++) {
       this.collection[i].outerHTML = newHtml;
     }
   }

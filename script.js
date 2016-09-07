@@ -35,15 +35,8 @@ $openLi.text("Eat more sausage links");
 
 //change text input to textarea 
 var $input = $('.input-form form input');
-var placeholder = $input.attr("placeholder");
-var $textarea = $('<textarea placeholder=' + placeholder + '></textarea>');
+var $textarea = $('<textarea>').attr("placeholder", "Tell me a story!");
 $input.first().replaceWith($textarea);
-
-
-
-
-
-
 
 
 

@@ -95,11 +95,7 @@ function jQuery(input) {
     input = input.split(" ");
     for(var i = 0; i < this.collection.length; i++) {
       for(var j = 0; j < input.length; j++) {
-        if (this.collection[i].className.includes(input[j])) {
-          this.collection[i].className = this.collection[i].className.replace(input[j], "");
-        } else {
-          this.collection[i].className += " " + input;
-        }
+        this.collection[i].classList.toggle(input[j]); 
       }
     };
   };
@@ -188,10 +184,12 @@ function jQuery(input) {
     return final;
   }
 
+  this.first = function() {
+    return $(this.collection[0]);
+  }
+
   this.replaceWith = function(newHtml) {
-    for(var i = 0; i < this.collection.length; i++) {
-      this.collection[i].outerHTML = newHtml;
-    }
+    this.collection[0].outerHTML = newHtml;
   }
 
 }

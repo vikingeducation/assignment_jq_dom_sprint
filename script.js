@@ -17,4 +17,4 @@ var list = $('ul').children()[6];
 
 $(list).text("GREAT FUN!");
 
-$('input[type="text"]').replaceWith('<textarea></textarea>');
+$('input').first().replaceWith('<textarea></textarea>');

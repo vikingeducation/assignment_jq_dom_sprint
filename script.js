@@ -17,7 +17,7 @@ $(document).ready(function() {
     $elip.addClass('happy');
 
     $masman = $('ul li:nth-child(5)').fadeOut();
-    $inputsAttrs = $('input[type="text"]').first()
-    $('input[type="text"]').first().replaceWith('<textarea> </textarea>')
+    $('input[type="text"]').first().replaceWith('<textarea> </textarea>');
+    
   }
 )

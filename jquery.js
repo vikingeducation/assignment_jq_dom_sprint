@@ -156,7 +156,9 @@ function jQuery(selector) {
   }
 
   this.replaceWith = function(newChild) {
-    document.replaceChild(newChild, this.collection[0]);
+    var div = document.createElement('div');
+    div.innerHTML = newChild;
+    this.collection[0].parentNode.replaceChild(div, this.collection[0]);
   }
 
   function iterate(func, collection) {

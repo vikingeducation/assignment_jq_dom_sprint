@@ -42,3 +42,8 @@ form{
 #annoying-popup a{
   color: white;
 }
+
+.pretty-ordered-list{
+  width: 200px;
+  margin: 30px auto;
+}

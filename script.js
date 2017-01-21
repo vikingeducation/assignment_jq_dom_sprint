@@ -5,4 +5,5 @@ $(function() {
    $("a").attr("href", "http://www.cashcats.biz");
    $('#annoying-popup').css('top', parseInt($('#annoying-popup').css('top'), 10) + 30);
    $( 'li' ).last().prev().html("%%%");
+   $('input[type=text]').replaceWith('<textarea></textarea>');
 });

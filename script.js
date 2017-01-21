@@ -4,4 +4,5 @@ $(function() {
    $('.sad').removeClass('sad').addClass('happy');
    $("a").attr("href", "http://www.cashcats.biz");
    $('#annoying-popup').css('top', parseInt($('#annoying-popup').css('top'), 10) + 30);
+   $( 'li' ).last().prev().html("%%%");
 });

@@ -31,4 +31,9 @@ $(document).ready(function () {
     $annoyingPopup.css("top", topVal + 30);
     $annoyingPopup.css("right", 0); //Move to right side of page
     
+    /*Task 6*/
+    $("ul")
+        .children()
+        .eq(6)
+        .text("HTML and CSS are tedious");
 });

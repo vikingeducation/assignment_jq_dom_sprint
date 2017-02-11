@@ -23,4 +23,12 @@ $(document).ready(function () {
     $("#annoying-popup > a")
         .first()
         .attr("href", "http://www.cashcats.biz");
+        
+    /*Task 5*/
+    var $annoyingPopup = $("#annoying-popup");
+    var topVal = $annoyingPopup
+        .css("top"); //get value of top
+    $annoyingPopup.css("top", topVal + 30);
+    $annoyingPopup.css("right", 0); //Move to right side of page
+    
 });

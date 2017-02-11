@@ -38,5 +38,9 @@ $(document).ready(function () {
         .text("HTML and CSS are tedious");
         
     /*Task 7*/
-    $('.input-form input[type="text"]')
+    var $oldTextInput = $('.input-form input[type="text"]');
+    var $newTextArea = $("<textarea></textarea>")
+        .attr("placeholder", $oldTextInput.attr("placeholder"))
+        .attr("name", "user-story");
+    $oldTextInput.replaceWith($newTextArea);
 });

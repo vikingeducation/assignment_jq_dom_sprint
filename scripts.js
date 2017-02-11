@@ -36,4 +36,7 @@ $(document).ready(function () {
         .children()
         .eq(6)
         .text("HTML and CSS are tedious");
+        
+    /*Task 7*/
+    $('.input-form input[type="text"]')
 });

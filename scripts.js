@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    console.log("Function RUN!");
+    $("h1").text("Something cheeky");
 });

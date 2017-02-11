@@ -12,4 +12,10 @@ $(document).ready(function () {
     $traversalList.append($("<li>Replace the ellipsis ... in one of the suggested topics with content of your choice -- but do so by traversing from a different element.</li>"));
     $traversalList.append($("<li>Replace the form input with a \<textarea\> instead of a \<input type=\"text\"\>.</li>"));
     $(".info-box").append($traversalList);
+    
+    
+    /*Task 3*/
+    $('[class*="sad"')
+        .removeClass("sad")
+        .addClass("happy");
 });

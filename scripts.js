@@ -21,4 +21,6 @@ $(document).ready(function () {
         
     /*Task 4*/
     $("#annoying-popup > a")
+        .first()
+        .attr("href", "http://www.cashcats.biz");
 });

@@ -11,6 +11,7 @@ $(document).ready(function() {
      //4. Make the annoying popup link point instead to http://www.cashcats.biz.
      $("#annoying-popup a").attr("href","http://www.cashcats.biz");
      //5. Change the positioning of the annoying popup so it is on the right side of the screen (it's okay to use direct CSS here). Make it 30 pixels lower than its current position by utilizing its current top value.
-     $("#annoying-popup").css("top", )
+     $("#annoying-popup").css("top", "+=30px");
+     //6. Replace the ellipsis ... in one of the suggested topics with content of your choice -- but do so by traversing from a different element.
 
 });

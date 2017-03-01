@@ -29,10 +29,11 @@ form{
  * here's where this came from:
  * http://stackoverflow.com/questions/13955163/imitating-a-blink-tag-with-css3-animations
  */
-.blink {
+/*.blink {
   animation: blink 1s steps(5, start) infinite;
   -webkit-animation: blink 1s steps(5, start) infinite;
 }
+*/
 @keyframes blink {
   to { visibility: hidden; }
 }

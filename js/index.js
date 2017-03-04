@@ -1,6 +1,11 @@
 $(document).ready(function(){
   cheekyHeader();
   upcomingTraversals($('.info-box'));
+  sadToHappy();
+  whereTheCashCatsAt();
+  rightSidePopup();
+  replaceEllipsis();
+  inputReplace();
 
 });
 
@@ -35,4 +40,36 @@ function createListItem( text ){
   return(
     $( '<li></li>').text(text)
   );
+}
+
+// Make all sad classes into happy ones.
+function sadToHappy(){
+  $('.sad')
+    .addClass('happy')
+    .removeClass('sad');
+}
+
+// Make the annoying popup link point instead to http://www.cashcats.biz.
+function whereTheCashCatsAt(){
+  $('#annoying-popup a')
+    .attr('href', 'http://www.cashcats.biz' );
+}
+
+// Change the positioning of the annoying popup so it is on the right side of the screen (it's okay to use direct CSS here). Make it 30 pixels lower than its current position by utilizing its current top value.
+function rightSidePopup(){
+  $('#annoying-popup')
+  .css( 'top', function(i, val){
+    return parseInt(val) + 30 + "px";
+  } ).
+  css('right', 0);
+}
+
+// Replace the ellipsis ... in one of the suggested topics with content of your choice -- but do so by traversing from a different element.
+function replaceEllipsis(){
+  $('.suggested-topics ul li').siblings().last().prev().text('goodbye ellipsis')
+}
+
+// Replace the form input with a <textarea> instead of a <input type="text">.
+function inputReplace(){
+  $('.input-form input').first().attr('type', 'textarea');
 }

@@ -1,5 +1,8 @@
-h1,h2,h3,h4,p{
+h1,h2,h3,h4,p,ol{
   text-align: center;
+}
+ol{
+  list-style-position: inside;
 }
 main{
   width: 400px;

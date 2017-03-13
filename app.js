@@ -11,13 +11,13 @@ $(document).ready(function() {
   //inside div with class 'info-box':
   //traverse to H4 and append with an ordered list
 
-  $newUl = $('<ul></ul>'); // create and hold ul DOM object in memory
+  $newOl = $('<ol></ol>'); // create and hold ul DOM object in memory
 
-  $('.info-box').append($newUl); //create new UL inside of div with 'info-box class'
+  $('.info-box').append($newOl); //create new UL inside of div with 'info-box class'
 
   //add class to ul for future additions of li's:
 
-  $('.info-box ul').addClass('traversalList');
+  $('.info-box ol').addClass('traversalList');
 
   //loop through ul DOPM element, adding 7 li's:
 
@@ -65,6 +65,7 @@ $(document).ready(function() {
   var $textArea = ('<textarea></textarea>');
 
   $('form').prepend($textArea);
+  $('textarea').attr('placeholder', 'Tell me a story');
 
   //delete the text input
 

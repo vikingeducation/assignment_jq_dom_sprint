@@ -15,8 +15,12 @@ for (let i = 0; i < traversalText.length; i++) {
 }
 
 $(document).ready(function() { 
-  $('h1').html("What do you think, big guy?");
+  $('h1')
+    .first()
+    .text("What do you think, big guy?");
+
   $('div.info-box.sad').append($upcomingTraversals);
+  
   $('.sad')
     .removeClass('sad')
     .addClass('happy');
@@ -34,5 +38,8 @@ $(document).ready(function() {
     .prev();
   $ellipsisItem.html('Woah, I\'m different now!')
 
-  $('input[type="text"]').replaceWith('<textarea>');
+  var $input = $('input[type="text"]');
+  var placeholder = $input.attr('placeholder');
+  var $textArea= $('<textarea>').attr('placeholder', placeholder);
+  $input.replaceWith($textArea);
 });

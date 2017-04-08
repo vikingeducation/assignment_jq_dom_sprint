@@ -20,4 +20,19 @@ $(document).ready(function() {
   $('.sad')
     .removeClass('sad')
     .addClass('happy');
+
+  var $popupLink = $('#annoying-popup').find('a');
+  $popupLink.attr('href', 'http://www.cashcats.biz')
+
+  $('#annoying-popup').css({
+    'right': '10px',
+    'top': '+=30px'
+  });
+
+  var $ellipsisItem = $('ul li')
+    .last()
+    .prev();
+  $ellipsisItem.html('Woah, I\'m different now!')
+
+  $('input[type="text"]').replaceWith('<textarea>');
 });

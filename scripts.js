@@ -7,18 +7,19 @@
 // Replace the form input with a <textarea> instead of a <input type="text">.
 
 
-var $traversals = ["Make all sad classes into happy ones.",
+var traversals = ["Make all sad classes into happy ones.",
                   "Make the annoying popup link point to http://www.cashcats.biz.",
                   "Change the positioning of the annoying popup so it is on the right side of the screen.",
                   "Replace the ellipsis...in one of the suggested topics with content of your choice.",
                   "Replace the form input with a <textarea> instead of a <input type='text'."
                   ];
 
+
 $(document).ready(function(){
   
   $("h1").text("Something cheeky");
 
-  $(".sad").removeClass(".sad").addClass(".happy");
+  $(".sad").toggleClass("sad happy");
 
   $("a[href='http://www.evilwebsite.com']").attr("href", "http://www.cashcats.biz");
 
@@ -30,6 +31,7 @@ $(document).ready(function(){
   $('ul li:nth-child(7)').text("Content of your choice");
 
   $("<input type='text'>").replaceWith("<textarea>");
+
 
 });
 

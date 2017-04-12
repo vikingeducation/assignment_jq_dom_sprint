@@ -19,8 +19,12 @@ $(document).ready(function(){
   $(".info-box sad").append($traversals);
   $(".sad").removeClass(".sad").addClass(".happy");
   $("a[href='http://www.evilwebsite.com']").attr("href", "http://www.cashcats.biz");
+  $("#annoying-popup").css({
+    "right": "10px",
+    "top": "+=30px"
+  });
   $('ul li:nth-child(7)').text("Content of your choice");
-  
+  $("<input type='text'>").replaceWith("<textarea>");
 
 });
 

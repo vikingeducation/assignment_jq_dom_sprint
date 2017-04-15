@@ -29,7 +29,7 @@ const moveAnnoyingPopup = () => {
   const $apop = $('div#annoying-popup')
   $apop.css({
     right: '10px',
-    top: +$apop.css('top').replace(/[^\d]/g, "") + 30 + "px"
+    top: '+=30px'
   });
 }
 

@@ -26,9 +26,6 @@ form{
   height: 100px;
 }
 
-.toRightAndDownSome {
-  right: -25px;
-}
 /* What, you like awful '90's blink tags?
  * here's where this came from:
  * http://stackoverflow.com/questions/13955163/imitating-a-blink-tag-with-css3-animations

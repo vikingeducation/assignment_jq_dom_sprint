@@ -22,9 +22,17 @@ form{
   background-color: red;
   color: white;
   position: absolute;
+  right: 10px;
   top: 10px;
   height: 100px;
+
 }
+
+ol {
+  width: 300px;
+  margin: auto;
+}
+
 /* What, you like awful '90's blink tags?
  * here's where this came from:
  * http://stackoverflow.com/questions/13955163/imitating-a-blink-tag-with-css3-animations

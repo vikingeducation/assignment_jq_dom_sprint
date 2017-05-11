@@ -27,16 +27,28 @@ $('#annoying-popup a').attr("href", "http://www.cashcats.biz");
 //so it is on the right side of the screen (it's okay to use direct CSS here). 
 //Make it 30 pixels lower than its current position by utilizing its 
 //current top value.
-
+$('#annoying-popup').css({
+	'right': '0',
+	'top' : '30px'
+});
 
 
 //Replace the ellipsis ... in one of the suggested topics 
 //with content of your choice -- but do so by traversing 
 //from a different element.
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!! stuck here
+$list = $(".suggested-topics ul li");
+$funnyFunctions = $(".suggested-topics ul li").first();
+console.log($funnyFunctions.html());
+$list[6].remove();
+$list.last().before($funnyFunctions);
 
-//Replace the form input with a <textarea> instead of a <input type="text">.
 
+//Replace the form input with a <textarea> instead of a 
+//<input type="text">.
 
+$tA = "<textarea>";
+$input = 
 
 console.log('test');
 

@@ -47,10 +47,11 @@ $list.last().before($funnyFunctions);
 //Replace the form input with a <textarea> instead of a 
 //<input type="text">.
 
-$tA = "<textarea>";
-$input = 
-
-console.log('test');
+$tA = $("<textarea>");
+$input = $("form input");
+$input.remove();
+$("form").prepend($tA);
+console.log($tA);
 
 
 });

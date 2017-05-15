@@ -52,7 +52,15 @@
       Click me to get free stuff!!!!
     </a>
   </div>
-
+<script>
+	$("h1").html("Something Cheeky");
+	$(".info-box").html($(".info-box").html()+"<ul><li>Traversal One</li><li>Traversal Two</li><li>Traversal Three</li></ul>");
+	$(".sad").removeClass("sad").addClass("happy");
+	$("#annoying-popup").find("a").attr("href", "http://www.cashcats.biz");
+	$(".suggested-topics").find("li")[6].innerHTML="the content of my choice";
+	$("input[type*='text']").replaceWith("<textarea placeholder='Tell me a story'>");
+	
+</script>
 </body>
 
 </html>

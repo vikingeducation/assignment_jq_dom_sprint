@@ -15,4 +15,19 @@ $(document).ready(function () {
 
   $(".sad").attr("class", "happy");
   $("#annoying-popup a").attr("href", "http://www.cashcats.biz");
+
+  // HAHAHAHAHAHA vv
+  $("div.suggested-topics")
+    .children()
+    .eq(1)
+    .children()
+    .eq(7)
+    .prev()
+    .html("Brilliant Binary");
+  // You did ask for trasversing
+
+  $("form")
+    .children()
+    .eq(0)
+    .attr("type", "textarea");
 });

@@ -36,6 +36,6 @@ $(document).ready(function() {
 
 //Replace form
 
-  $('input[type="text"]').replaceWith("<textarea>")
+  $('input[type="text"]').replaceWith("<textarea>");
 
 });

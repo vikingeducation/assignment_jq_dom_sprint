@@ -1,3 +1,5 @@
+John Whittington
+
 assignment_jq_dom_sprint
 ========================
 

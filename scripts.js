@@ -1,84 +1,62 @@
 // FILL IN THE FUNCTIONS BELOW
+ travList =  ["1st","2nd","4th","3rd"];
 
-var sprintFunctions = {
-  largestEl: function(array){  
-    array.sort;
-return array[array.length - 1]
-  },
-  
-  reversed: function(word) {  
-    return word.split('').reverse().join('');
-  },
+ var TextFormReplace = function(){
+var thisObj = document.getElementById("textForm");
+var child = thisObj.childNodes[1];
 
-loudSnakeCase:  function(word){  
-var newString = "";
-word = word.toLowerCase();
+thisObj.removeChild(child);
+  var x = document.createElement("textarea");
+  x.setAttribute("id", "mytextArea");
+  x.name = "post";
+x.maxLength = "500";
+x.width = "5%";
+x.height = "4%";
+x.innerHTML = "THISSSSS";
+ thisObj.appendChild(x);
+ }
 
-    var wordsArray = word.split(/\W+/);
-for (var i = 0; i < wordsArray.length; i++) {
- 
-  newString += wordsArray[i].charAt(0).toUpperCase() + wordsArray[i].slice(1);
-if (i != wordsArray.length - 1){newString += "_";}else{}
 
+var ChangeH1 =  function(){
+  document.getElementById("h1ID").innerHTML = "Cheeky";
 }
-if(newString.charAt(newString.length - 1) === "_")
-{newString = newString.slice(0,newString.length - 1);}
-return  newString
-  },
 
-  compareArrays: function(arr1,arr2){ 
-    for (var i = 0; i < arr1.length; i++) {
-if(arr1[i] != arr2[i]){return false}}
-return true 
-  },
+var CreateOrderedList = function(){
+  var x = document.createElement("OL");
+      x.setAttribute("id", "myOl");
 
-  fizzBuzz: function(num){  
-var arr = []
-for (var i = 0; i < num; i++) {
-    
-    if((i + 1) % 3 === 0){
-        
-        if((i + 1) % 5 === 0){
-        
-        arr[i] = "FIZZBUZZ";
-    }else{arr[i] = "FIZZ";}
+      document.getElementById("h4ID").appendChild(x);
+    travList.sort().forEach(function(el){
+
+      var y = document.createElement("LI");
+      var t = document.createTextNode(el);
+      y.appendChild(t);
+      document.getElementById("myOl").appendChild(y);
+
+    })
+//document.getElementById("h4ID").style.color = "blue";
+
     }
-    if((i + 1) % 3 != 0 && (i + 1) % 5 === 0){arr[i] = "BUZZ";}
-    if((i + 1) % 3 != 0 && (i + 1) % 5 != 0){
-    arr[i] = i + 1;}
-    
+  var SadToHappy =  function(){
+    var sadClasses = document.getElementsByClassName("sad");
+var i = 0;
+
+for(i = 0; i < sadClasses.length; i){sadClasses[i].className = "happy";}
+
 }
-return arr
-  },
 
-  myMap: function(arr,fun){
-newArr = []  
- for (var i = 0; i < arr.length; i++){newArr[i] = fun(i);}
-return newArr
-
-  },
-checkprime: function(num2){
-var i = 2;
-while(i < num2)   
-{
-
-if(num2 % i === 0){return false;
+var ChangeElipses = function(){
+    document.getElementById("elipses").innerHTML = document.getElementById("myOl").childNodes[0].innerHTML;
 }
-i++;
-}
-return true
-},
 
- primes:  function (num){  
-var i = 2;
-
-var arr = [];
-
-while(i < num)   
-{
-    if(this.checkprime(i) === true){arr.push(i);}
-
-i++;
-}return arr
-  },
+var ChangeLink = function(){
+  var popUp = document.getElementById("annoying-popup");
+popUp.innerHTML=
+"<a href=http://www.cashcats.biz>" + "I have Changed This link to cats" + "</a>"
+;
+popUp.style.background= "blue";
+popUp.style.left="80%";
+popUp.style.width="19%";
+var ht = popUp.style.margin.right - "330px";
+popUp.style.top = "+30px"
 }

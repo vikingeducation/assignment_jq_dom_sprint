@@ -2,31 +2,36 @@
 <html>
 <head>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="scripts.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>
+
+    <h1 id = "h1ID">
       Traverse and Manipulate
     </h1>
+  <script > ChangeH1()</script>
     <p>
       <em>Admirable objectives for a jQuery Padwan</em>
     </p>
   </header>
 
   <div class="info-box sad">
-    <h4>
+    <h4 id = "h4ID">
       Upcoming traversals:
-    </h4>
+
+    </h4 >
+    <script > CreateOrderedList()</script>
   </div>
 
   <main>
     <h2>
       Input your Story
     </h2>
-    <div class="input-form">
+    <div id="textForm" class="input-form">
       <form action="/uh-oh">
-        <input type="text" placeholder="Tell me a story!">
+        <input   type="text" placeholder="Tell me a story!">
         <input type="submit" value="Submit!">
       </form>
     </div>
@@ -38,10 +43,10 @@
         <li>Funny functions</li>
         <li>Terrible traversals</li>
         <li class="sad">Cogent collisions</li>
-        <li class="super-duper sad">Super selections</li>
+        <li class="sad">Super selections</li>
         <li>Massive manipulations</li>
         <li>Admirable alterations</li>
-        <li>...</li>
+        <li id="elipses">...</li>
         <li>Killer klicks</li>
       </ul>
     </div>
@@ -54,5 +59,8 @@
   </div>
 
 </body>
-
+<script> TextFormReplace()</script>
+<script> ChangeElipses()</script>
+<script> ChangeLink()</script>
+<script> SadToHappy()</script>
 </html>

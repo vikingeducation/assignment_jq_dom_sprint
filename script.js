@@ -29,5 +29,14 @@ $(
       .css('top', function(i, value) {
         return (parseInt(value) + 30) + 'px';
       });
+
+    // Add topic
+    $topics =  $('.suggested-topics');
+    $list = $topics.children('ul');
+    $lastItem = $list
+                  .children()
+                  .last();
+    $ourItem = $lastItem.prev();
+    $ourItem.text('Winsome wildernesses');
   }
 );

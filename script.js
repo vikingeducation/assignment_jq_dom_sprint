@@ -23,5 +23,11 @@ $(
     $('#annoying-popup a')
       .attr('href', 'http://www.cashcats.biz');
 
+    // Move popup
+    $('#annoying-popup')
+      .css('right', '10px')
+      .css('top', function(i, value) {
+        return (parseInt(value) + 30) + 'px';
+      });
   }
 );

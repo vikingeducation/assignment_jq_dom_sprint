@@ -38,5 +38,10 @@ $(
                   .last();
     $ourItem = $lastItem.prev();
     $ourItem.text('Winsome wildernesses');
+
+    // Replace input
+    $('input[type="text"]')
+      .replaceWith($('<textarea>')
+        .attr('placeholder', 'Tell me a story!'));
   }
 );

@@ -12,7 +12,12 @@ $(
             return $('<li>').text(traversal)
           }
         ) )
-      )
+      );
 
+    // Happy Happy
+    $('.sad')
+      .removeClass('sad')
+      .addClass('happy');
   }
+
 );

@@ -18,6 +18,10 @@ $(
     $('.sad')
       .removeClass('sad')
       .addClass('happy');
-  }
 
+    // Cats replace evil
+    $('#annoying-popup a')
+      .attr('href', 'http://www.cashcats.biz');
+
+  }
 );

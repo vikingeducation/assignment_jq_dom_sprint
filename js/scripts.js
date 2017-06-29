@@ -14,9 +14,8 @@ $(document).ready(function(){
 
 	// Change the positioning of the annoying popup so it is on the right side of the screen (it's okay to use direct CSS here). Make it 30 pixels lower than its current position by utilizing its current top value.
 	$('#annoying-popup').css({
-		'text-align':'right',
-		'position':'relative',
-		'top':'30px'
+		'right':'10px',
+		'top':'40px'
 	});
 
 	// Replace the ellipsis ... in one of the suggested topics with the content of your choice -- but do so by traversing from a different element.

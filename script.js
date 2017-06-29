@@ -39,8 +39,10 @@ $(
     $ourItem.text('Winsome wildernesses');
 
     // Replace input
-    $('input[type="text"]')
-      .replaceWith($('<textarea>')
-        .attr('placeholder', 'Tell me a story!'));
+    $original = $('input[type="text"]')
+    $replacement = $('<textarea>').attr(
+      'placeholder', $original.attr('placeholder')
+    )
+    $original.replaceWith($replacement);
   }
 );

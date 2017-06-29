@@ -30,13 +30,9 @@ $(
     });
 
     // Add topic
-    $topics =  $('.suggested-topics');
-    $list = $topics.children('ul');
-    $lastItem = $list
-                  .children()
-                  .last();
-    $ourItem = $lastItem.prev();
-    $ourItem.text('Winsome wildernesses');
+    $('.suggested-topics ul')
+      .children('li:contains("...")')
+      .text('Winsome wildernesses');
 
     // Replace input
     $original = $('input[type="text"]')

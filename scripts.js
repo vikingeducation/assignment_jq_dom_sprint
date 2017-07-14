@@ -19,6 +19,10 @@ $(document).ready(function(){
   $( '.happy' ).removeClass( 'sad' );
 
 
+  // Make the annoying popup link point instead to http://www.cashcats.biz.
+  $('#annoying-popup a').attr('href','http://www.cashcats.biz');
+
+
 
 
 })

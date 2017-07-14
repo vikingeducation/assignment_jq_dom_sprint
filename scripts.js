@@ -40,6 +40,9 @@ $(document).ready(function(){
   $child.text('Content of my choice');
 
 
+  // Replace the form input with a <textarea> instead of a <input type='text'>.
+  $( '.input-form form' ).prepend('<textarea form="uh-oh" placeholder="Tell me a story!"></textarea>');
 
+  $( '.input-form form input[type="text"]' ).remove();
 
 })

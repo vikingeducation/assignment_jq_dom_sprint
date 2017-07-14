@@ -14,4 +14,11 @@ $(document).ready(function(){
   });
 
 
+  // Make all sad classes into happy ones.
+  $( '.sad' ).addClass('happy');
+  $( '.happy' ).removeClass( 'sad' );
+
+
+
+
 })

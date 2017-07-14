@@ -23,6 +23,18 @@ $(document).ready(function(){
   $('#annoying-popup a').attr('href','http://www.cashcats.biz');
 
 
+  // Change the positioning of the annoying popup so it is on the right side of the screen (it's okay to use direct CSS here). Make it 30 pixels lower than its current position by utilizing its current top value.
+  $currentTop = $( '#annoying-popup' ).css('top').slice(0, -2);
+  $newTop = Number($currentTop) + 30 + 'px';
+
+  $( '#annoying-popup' )
+    .css({
+      'right': '0',
+      'top': $newTop,
+    }
+  );
+
+
 
 
 })

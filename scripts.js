@@ -4,7 +4,7 @@ $(document).ready(function(){
   $( 'header h1' ).text('something cheekier than that');
 
   // Inside the container for 'Upcoming Traversals', create and insert an ordered list of upcoming traversals.
-  $newOl = $('<ol></ol>');
+  var $newOl = $('<ol></ol>');
   $( '.info-box' ).append($newOl);
 
   items = [

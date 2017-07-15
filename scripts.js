@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   // Inside the container for 'Upcoming Traversals', create and insert an ordered list of upcoming traversals.
   var $newOl = $('<ol></ol>');
-  $( '.info-box' ).append($newOl);
+  $( '.info-box.sad' ).append($newOl);
 
   items = [
     'Change the <h1> to something cheeky',

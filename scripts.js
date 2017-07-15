@@ -41,7 +41,11 @@ $(document).ready(function(){
 
 
   // Replace the form input with a <textarea> instead of a <input type='text'>.
-  $( '.input-form form' ).prepend('<textarea form="uh-oh" placeholder="Tell me a story!"></textarea>');
+  $textarea = $( '<textarea></textarea>' )
+    .attr('form', 'uh-oh')
+    .attr('placeholder', 'Tell me a story!');
+
+  $( '.input-form form' ).prepend($textarea);
 
   $( '.input-form form input[type="text"]' ).remove();
 

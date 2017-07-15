@@ -49,16 +49,17 @@ $(document).ready(function(){
 
   // Replace the ellipsis ... in one of the suggested topics with the content of your choice -- but do so by traversing from a different element.
   var $child = $( ".suggested-topics ul li:contains('...')");
-  var $child.text('CONTENT OF MY CHOICE');
+  $child.text('CONTENT OF MY CHOICE');
 
 
   // Replace the form input with a <textarea> instead of a <input type='text'>.
+  var $inputField = $( '.input-form form input[type="text"]' );
   var $textarea = $( '<textarea></textarea>' )
     .attr('form', 'uh-oh')
-    .attr('placeholder', 'Tell me a story!');
+    .attr('placeholder', $inputField.attr('placeholder'));
 
   $( '.input-form form' ).prepend($textarea);
 
-  $( '.input-form form input[type="text"]' ).remove();
+  $inputField.remove();
 
 })

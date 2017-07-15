@@ -17,9 +17,15 @@ $(document).ready(function(){
     'Replace the form input with a <textarea> instead of a <input type="text">.'
   ];
 
-  $items.forEach(function(item){
-    $( '.info-box ol' ).append($('<li>'+item+'</li>'));
-  });
+  // $items.forEach(function(item){
+  //   $( '.info-box ol' ).append($('<li>'+item+'</li>'));
+  // });
+
+  $.each($items, function(index, element){
+    var $li = $('<li></li>');
+    $li.text(element);
+    $newOl.append($li);
+  })
 
 
   // Make all sad classes into happy ones.

@@ -7,7 +7,7 @@ $(document).ready(function(){
   var $newOl = $('<ol></ol>');
   $( '.info-box.sad' ).append($newOl);
 
-  items = [
+  var $items = [
     'Change the <h1> to something cheeky',
     'Inside the container for "Upcoming Traversals", create and insert an ordered list which corresponds to this one.',
     'Make all sad classes into happy ones.',
@@ -17,7 +17,7 @@ $(document).ready(function(){
     'Replace the form input with a <textarea> instead of a <input type="text">.'
   ];
 
-  items.forEach(function(item){
+  $items.forEach(function(item){
     $( '.info-box ol' ).append($('<li>'+item+'</li>'));
   });
 

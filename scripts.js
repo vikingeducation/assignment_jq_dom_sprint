@@ -50,8 +50,8 @@ $(document).ready(function(){
 
 
   // Replace the ellipsis ... in one of the suggested topics with the content of your choice -- but do so by traversing from a different element.
-  $child = $( '.suggested-topics ul' ).find("li:contains('...')");
-  $child.text('Content of my choice');
+  $child = $( ".suggested-topics ul li:contains('...')");
+  $child.text('CONTENT OF MY CHOICE');
 
 
   // Replace the form input with a <textarea> instead of a <input type='text'>.

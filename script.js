@@ -17,4 +17,7 @@ $(".info-box.sad").append($list);
 //	Make all sad classes into happy ones
 $(".sad").addClass("happy").removeClass("sad");
 
+//	Make the annoying popup link point instead to http://www.cashcats.biz
+$("#annoying-popup a").prop("href", "http://www.cashcats.biz/");
+
 });

@@ -20,4 +20,19 @@ $(document).ready(function(){
   //Make the annoying popup link point instead to http://www.cashcats.biz
   $( '#annoying-popup a').attr( "href", "http://www.cashcats.biz" );
 
+  //Change the positioning of the annoying popup so it is on the right side of the screen
+  $( '#annoying-popup' ).css({
+    "right": "10px",
+    "top": "40px"
+  });
+
+  //replace the ellipsis with my own list item
+  var $lists = $( '.suggested-topics ul li');
+  $( $lists[6]).text("silly selectors");
+
+  //Replace the form input with a <textarea> instead of a <input type="text">.
+  $( 'form input[type="text"]' ).replaceWith("<textarea></textarea>");
+
+
+  //i did it!
 });

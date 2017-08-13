@@ -29,9 +29,12 @@ form{
  * here's where this came from:
  * http://stackoverflow.com/questions/13955163/imitating-a-blink-tag-with-css3-animations
  */
+ //
+ //DC: Changed from 1s to 100s blink rate
+ //
 .blink {
-  animation: blink 1s steps(5, start) infinite;
-  -webkit-animation: blink 1s steps(5, start) infinite;
+  animation: blink 100s steps(5, start) infinite;
+  -webkit-animation: blink 100s steps(5, start) infinite;
 }
 @keyframes blink {
   to { visibility: hidden; }

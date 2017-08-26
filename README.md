@@ -19,4 +19,4 @@ The objective is for the scripts in the script file to cause the desired changes
   
   Replace the ellipsis ... in one of the suggested topics with the content of your choice -- but do so by traversing from a     different element.  
   
-  Replace the form input with a <textarea> instead of a <input type="text">.
+  Replace the form input with a <textarea> instead of a `<input type="text">`.

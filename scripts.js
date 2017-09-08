@@ -38,20 +38,16 @@ $('#annoying-popup a')
 
 
 //OBJECTIVE 5
-//Grab the current popup top setting & add 30px to it  <=YOUAREHERE
-let $currentPopupTopVal = $('#annoying-popup').css('top');
-let $newPopupTopVal = parseInt($currentPopupTopVal - 'px'); //doesn't work
-
-console.log($newPopupTopVal);
-
-//Move the popup to the right & down 30px using the above
+//Grab the popup
 $('#annoying-popup')
-	.css({
-		'position': 'absolute',
-		'display': 'block',
-		'right': '10px',
-		'top': $newPopupTopVal
-	});
+
+	//Change the 'top' CSS attribute to 40px by adding 30px to the current value
+	.css('top', function(index, value) {
+		return (parseInt(value.slice(0, 2)) + 30).toString() + 'px';
+	})
+
+	//Move the popup to the right of the screen
+	.css('right', '10px');
 
 
 //Kill the blinker for now

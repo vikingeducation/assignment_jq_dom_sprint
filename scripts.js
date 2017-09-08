@@ -1,30 +1,35 @@
 'use strict';
 
+//OBJECTIVE #1
 //Change contents of h1
 let $changeH1 = $("h1").text("a.k.a. 'Life'");
 
 
-//Target 'Upcoming Traversals' & add <ol> with CSS
-let $upcomingTraversalsTagret = $(".info-box")
+//OBJECTIVE #2
+//Assign new content to variables for later use
+let $newOl = $("<ol id='new-stuff'></div>");
+let listItems = ["<li>Meow</li>",
+				 "<li>Woof</li>",
+				 "<li>Ribbit</li>",
+				 "<li>Roar</li>"];
+
+//Target 'Upcoming Traversals' & add the new content from above with styling
+$(".info-box")
 	.css({
 		'display': 'block',
 		'width': '15%',
 		'margin': 'auto',
 		'text-align': 'center'
 	})
-	.append('<ol>');
+	.append($newOl.append(listItems));
 
-//Add the list items to newly created <ol>
-let $upcomingTraversals = $(".info-box ol")
-	.append('<li>Meow</li>')
-	.append('<li>Woof</li>')
-	.append('<li>Ribbit</li>')
-	.append('<li>Roar</li>');
 
+//OBJECTIVE #3
 //Change class .sad to class .happy
 let $happyNow = $(".sad")
 	.addClass('happy')
 	.removeClass('sad');
 
+
+//Kill the blinker for now
 let $iHatePopup = $("#annoying-popup").hide();
-//$upcomingTraversalsTagret.attr($upcomingTraversals);

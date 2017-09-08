@@ -50,5 +50,17 @@ $('#annoying-popup')
 	.css('right', '10px');
 
 
-//Kill the blinker for now
-//$("#annoying-popup").hide();
+//OBJECTIVE 6
+//Traverse through elements to grab the correct <li>
+let $replaceEllipsis = $('.suggested-topics ul li')
+	.last()
+	.prev();
+
+//Change the content of the <li> grabbed above
+$replaceEllipsis.html("<strong>The content of my choice</strong>");
+
+
+//OBJECTIVE 7
+//Grab the correct <input> & replace it with a <textarea>
+$('.input-form form input[type="text"]')
+	.replaceWith('<textarea>');

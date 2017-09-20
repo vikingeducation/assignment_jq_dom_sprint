@@ -8,6 +8,11 @@ main{
 form{
   text-align: center;
 }
+ol{
+  position: relative;
+
+}
+
 .happy{
   color: green;
 }

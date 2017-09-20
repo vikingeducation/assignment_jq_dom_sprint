@@ -8,6 +8,12 @@ main{
 form{
   text-align: center;
 }
+ol{
+  width: 200px;
+  margin: auto;
+
+}
+
 .happy{
   color: green;
 }

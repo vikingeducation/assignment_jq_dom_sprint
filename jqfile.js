@@ -31,8 +31,10 @@ $(document).ready(function() {
 
 
    var  $newLi = $('<li>--</li>');
-   var $oldLi = $('li') [6];
+   var $oldLi = $('li') [9];
    $($oldLi).replaceWith($newLi);
+
+
 
    var textArea = "<textarea />";
    var $inputText = $(':input[type=text]');

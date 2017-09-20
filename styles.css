@@ -9,7 +9,8 @@ form{
   text-align: center;
 }
 ol{
-  position: relative;
+  width: 200px;
+  margin: auto;
 
 }
 

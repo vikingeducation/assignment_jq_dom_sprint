@@ -19,10 +19,11 @@ form{
   color: orange;
 }
 #annoying-popup{
+  position: absolute;
+  right: 10px;
   background-color: red;
   color: white;
-  position: absolute;
-  top: 10px;
+  top: 40px;
   height: 100px;
 }
 /* What, you like awful '90's blink tags?

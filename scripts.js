@@ -11,6 +11,8 @@ $(function() {
 
     $(".sad").attr("class", "happy");
 
+    $("a").prop("href","http://www.cashcats.biz/");
+
 
 
     });

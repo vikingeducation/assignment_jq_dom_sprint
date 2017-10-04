@@ -8,7 +8,8 @@ $(function() {
       for (olnum = 0; olnum < traversels.length; olnum ++) {
         $("#newList").append("<li>" + traversels[olnum] + "</li>");
     }
-      $("ol").css("text-align", "center");
+
+    $(".sad").attr("class", "happy");
 
 
 

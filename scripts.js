@@ -1,7 +1,15 @@
-var traversals = new Array ("Document","Root Element", 'Element', 'Text');
 
 $(function() {
     $("h1").html("Boring Ass JQuery");
 
-    $(".info-box").html("Changed")
+    var traversels = new Array("Document","Elelment", "Head", "Body","Title" );
+
+    $(".info-box").append("<ol id='newList'></ol>");
+      for (olnum = 0; olnum < traversels.length; olnum ++) {
+        $("#newList").append("<li>" + traversels[olnum] + "</li>");
+    }
+      $("ol").css("text-align", "center");
+
+
+
     });

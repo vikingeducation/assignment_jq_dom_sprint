@@ -13,6 +13,12 @@ $(function() {
 
     $("a").prop("href","http://www.cashcats.biz/");
 
+    $("#annoying-popup").css("text-align", "right").css("top", "40px");
+
+    $("li:contains('...')").html('Changed').css('font-weight', 'bold');
+
+    $(":text").prop("type", "textarea");
+
 
 
     });

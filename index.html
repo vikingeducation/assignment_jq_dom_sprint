@@ -52,6 +52,28 @@
       Click me to get free stuff!!!!
     </a>
   </div>
+  
+  <script>
+    $("h1").html("Holy Cow!");
+    
+    $(".info-box").append("<ol><li>Tranfersal 1</li></ol>");
+    
+    $(".sad").addClass("happy");
+    $(".sad").removeClass("sad");
+    
+    $("#annoying-popup a").attr("href", "http://www.cashcats.biz");
+    
+    $("#annoying-popup").css( "top", function( current ) {
+      return current + 30;
+    });
+    
+    $("#annoying-popup").css("right", 0 );
+    
+    $(".suggested-topics ul").children().last().prev().replaceWith("<li>Serious methods</li>");
+    
+    $('input[type="text"]').after($('<textarea></textarea>'));
+     $('input[type="text"]').remove();
+  </script>
 
 </body>
 

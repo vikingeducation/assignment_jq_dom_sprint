@@ -28,5 +28,7 @@ $(document).ready(function(){
     
     // 7. replace form input with 'textarea'
     var textArea = $('<input type="textarea" placeholder="Tell me a story!"</input>'); 
-    $('.input-form input[type=text]').replaceWith(textArea);    
+    $('.input-form input[type=text]').replaceWith(textArea);  
+    // not sure why it doesn't display differently but according to the Dev Tools, the type has been adjusted. 
+    
 });

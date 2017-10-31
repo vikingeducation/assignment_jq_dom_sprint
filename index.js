@@ -44,6 +44,9 @@ $( document ).ready( function () {
 	// change ellipsis to something else
 	$('li:contains(...)').html('Be one with the ellipsis');
 
+	// change form type text to textarea
+	$('form input:first').attr('type', 'textarea');
+
 });
 
 

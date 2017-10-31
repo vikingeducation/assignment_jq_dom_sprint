@@ -33,8 +33,12 @@ $( document ).ready( function () {
 	$('.info-box').append(list);
 
 
-
+	// change all sad DOM classes to happy
 	$('.sad').attr('class', 'happy');
+
+
+	// change annoying pop href
+	$('#annoying-popup a').attr('href', 'http://www.cashcats.biz');
 
 });
 

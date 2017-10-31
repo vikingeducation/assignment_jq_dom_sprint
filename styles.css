@@ -23,7 +23,8 @@ form{
   background-color: red;
   color: white;
   position: absolute;
-  top: 10px;
+  right: 0px;
+  top: 40px;
   height: 100px;
 }
 /* What, you like awful '90's blink tags?

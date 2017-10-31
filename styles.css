@@ -1,13 +1,14 @@
 h1,h2,h3,h4,p{
   text-align: center;
 }
-main{
+main, ol, li{
   width: 400px;
   margin: auto;
 }
 form{
   text-align: center;
 }
+
 .happy{
   color: green;
 }

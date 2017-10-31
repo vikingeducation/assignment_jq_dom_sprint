@@ -34,5 +34,12 @@ $( document ).ready( function () {
 
 
 
-	
+	$('.sad').attr('class', 'happy');
+
 });
+
+
+
+
+
+

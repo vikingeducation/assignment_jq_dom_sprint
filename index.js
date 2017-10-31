@@ -40,6 +40,10 @@ $( document ).ready( function () {
 	// change annoying pop href
 	$('#annoying-popup a').attr('href', 'http://www.cashcats.biz');
 
+
+	// change ellipsis to something else
+	$('li:contains(...)').html('Be one with the ellipsis');
+
 });
 
 

@@ -1,9 +1,10 @@
+//ASSIGNMENT IN JQUERY:
 $(document).ready(function() {
 
 $('h1').html('Sassy');
 });
 
-/* CODE FOR ASSIGNMENT IN PURE JS....
+/* ASSIGNMENT IN PURE JS:
 
   function createOL() {
   //create ordered list and append to Upcoming Traversals

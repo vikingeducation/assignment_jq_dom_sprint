@@ -8,9 +8,7 @@ $( document ).ready(function() {
 
 /* Inside the container for "Upcoming Traversals", create and insert an
 ordered list of upcoming traversals. */
-
-  //$( "info-box" );
-
+  $( ".info-box" ).append( "[<ol>, <li></li>, <li></li>, <li></li>, <li></li>, <li></li>]" );
 
 // Make all sad classes into happy ones.
   $( ".sad" ).attr( "class", "happy" );
@@ -30,6 +28,6 @@ your choice -- but do so by traversing from a different element. */
 
 /* Replace the form input with a <textarea> instead of a <input type="text">. */
   var $test = $( "input" ).first();
-  $test.replaceWith( "<textarea></textarea>" )
+  $test.replaceWith( "<textarea></textarea>" );
 
 });

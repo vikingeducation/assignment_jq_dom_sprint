@@ -1,14 +1,25 @@
 
-// cd Documents/Viking/JS/jq_warmup
-
 $( document ).ready(function() {
 
 // Change the <h1> to something cheeky
   $( "h1" ).html( "Something Cheeky" );
 
 /* Inside the container for "Upcoming Traversals", create and insert an
-ordered list of upcoming traversals. */
-  $( ".info-box" ).append( "[<ol>, <li></li>, <li></li>, <li></li>, <li></li>, <li></li>]" );
+ordered list of upcoming traversals.*/
+  var $box = $( ".info-box" );
+  $box.css( "text-align", "center" )
+  $box.append("<ol>");
+  $box.append("<li> H1 changed to something cheeky");
+  $box.append("</li>");
+  $box.append("<li> Sad classes become happy");
+  $box.append("</li>");
+  $box.append("<li> Popup stops linking to evil, and instead links to cats");
+  $box.append("</li>");
+  $box.append("<li> Second to last suggested topic becomes quality queries");
+  $box.append("</li>");
+  $box.append("<li> Form input changed to textarea, replacing text input");
+  $box.append("</li>");
+  $box.append("</ol>");
 
 // Make all sad classes into happy ones.
   $( ".sad" ).attr( "class", "happy" );
@@ -27,7 +38,7 @@ your choice -- but do so by traversing from a different element. */
   $listItem.html( "Quality queries" );
 
 /* Replace the form input with a <textarea> instead of a <input type="text">. */
-  var $test = $( "input" ).first();
-  $test.replaceWith( "<textarea></textarea>" );
+  var $text = $( "input" ).first();
+  $text.replaceWith( "<textarea></textarea>" );
 
 });
